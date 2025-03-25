@@ -26,4 +26,5 @@ public class TaskModel {
     @ManyToOne
     @JoinColumn(name = "responsible_user_id", nullable = false)
     private UserModel responsibleUserId;
+
 }
