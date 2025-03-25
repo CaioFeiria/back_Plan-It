@@ -20,6 +20,10 @@ public class TaskModel {
     private Date creationDate;
     private Date deadlineDate;
 
-    @Enumerated(EnumType.STRING) // Salva os valores como texto no banco
+    @Enumerated(EnumType.STRING)
     private TaskPriority priority;
+
+    @ManyToOne
+    @JoinColumn(name = "responsible_user_id", nullable = false)
+    private UserModel responsibleUserId;
 }
